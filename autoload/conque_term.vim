@@ -653,6 +653,10 @@ function! conque_term#set_mappings(action) "{{{
         if c == 27 || c == 3
             continue
         endif
+        " <C-n> and <C-p>
+        if c == 14 || c == 16
+            continue
+        endif
         if l:action == 'start'
             sil exe 'i' . map_modifier . 'map <silent> <buffer> <C-' . nr2char(64 + c) . '> <C-o>:' . s:py . ' ' . b:ConqueTerm_Var . '.write_ord(' . c . ')<CR>'
         else

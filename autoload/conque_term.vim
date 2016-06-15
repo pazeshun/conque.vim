@@ -653,8 +653,8 @@ function! conque_term#set_mappings(action) "{{{
         if c == 27 || c == 3
             continue
         endif
-        " <C-n> and <C-p>
-        if c == 14 || c == 16
+        " <C-n>, <C-p>, <C-y>, <C-e>
+        if c == 14 || c == 16 || c == 25 || c == 5
             continue
         endif
         if l:action == 'start'
